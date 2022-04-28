@@ -3,14 +3,8 @@ The real estate markets, present an interesting opportunity for data analysts to
 Prediction of property prices is becoming increasingly important and beneficial. 
 Property prices are a good indicator of both the overall market condition and the economic health of a country. 
 Considering the data provided, we are wrangling a large set of property sales records stored in an unknown format and with unknown data quality issues
----
-title: "Data Visualization Final Project"
-name: "Agnes Sithole St Thomas University_Miami_2022"
-topic: "Appartment price USA"
-output: html_notebook
----
 
-#Libraries are in a seperate file
+# Libraries are in a seperate file
 
 ```{r}
 apartments <- read_csv("apartment_price_2021.csv")
@@ -32,7 +26,7 @@ p+theme()
 apartments %>% summarise(average_living_area = mean(sqft_living))
 ```
 
-#Distribution of Bedrooms
+# Distribution of Bedrooms
 ```{r}
 apartments %>%
   group_by(bedrooms) %>%
@@ -105,7 +99,7 @@ apartments %>%
 ```
 
 
-#Simple ANN with only a sigle hidden neuron
+# Simple ANN with only a sigle hidden neuron
 ```{r}
 ## Prepare Training and Testing Sets
 set.seed(12345)
@@ -118,7 +112,7 @@ model <- neuralnet(formula = bedrooms ~ price + bathrooms + sqft_living + sqft_l
 plot(model)
 ```
 
-#Compute values
+# Compute values
 ```{r}
 #Predict strength (index 9) when given [1:8]
 model_results <- neuralnet::compute(model, test[1:9])
@@ -148,7 +142,7 @@ ann_result2 <- cor(predicted_bedrooms2,test$bedrooms)
 ann_result2
 ```
 
-##Examine normalized data to unnormalized values(actual)
+# Examine normalized data to unnormalized values(actual)
 ```{r}
 #note that the predicted and actual values are on different scales
 bedrooms <- data.frame ( 
@@ -157,8 +151,7 @@ bedrooms <- data.frame (
 head(bedrooms, n = 3)
 ```
 
-#Classification Analysis
-#Naive Bayes Analysis
+# Naive Bayes Analysis
 ```{r}
 ## Prepare Training and Testing Sets
 set.seed(12345)
@@ -189,7 +182,7 @@ cat("Laplace Accuracy:", laplaceaccuracy)
 Naive Bayes and Laplace may not be the best method to classify this data, because 0.21 accuracy, might be too low.I would recommend to further analyze using other models then choose the best method of study.
 
 
-#Linear Model
+# Linear Model
  A Multivariate Linear Regression Model that predicts number of bedrooms depending on the price.bathrooms and sqft_living area
 ```{r}
 ## Prepare Training and Testing Sets
@@ -212,7 +205,7 @@ head(bedroomsPrediction, n = 3)
 write.csv(bedroomsPrediction, file = "BedroomsPredvsActual.csv")
 ```
 
-#Linear Model Error Metrices
+# Linear Model Error Metrices
 ```{r}
 mae <- mae(bedroomsPrediction$ActualBedrooms,bedroomsPrediction$PredictedBedrooms4)
 cat("Mean Absolute Error:",mae,"\n")
@@ -224,7 +217,7 @@ cat("Root mean square error:",rmse,"\n")
 ### Which model is the best and Why?
 RMSE is the best model. It has the least error without being overfitted and uses the least amount of variables for prediction which means less computing power is needed to process the model prediction.
 
-#Create a Results table for all models used
+# Create a Results table for all models used
 ```{r}
 # Create a data frame predicted Gold Medals and the Actual Gold
 Results <- data.frame(ann_single_neuron = ann_result, 
