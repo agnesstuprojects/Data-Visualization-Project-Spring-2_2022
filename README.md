@@ -60,7 +60,7 @@ ggplot() +
   ) +
   ggthemes::theme_few()
 ```
-![image](https://user-images.githubusercontent.com/95668215/165869935-1d5d8105-695b-4d0b-9ee3-18520785e4db.png)
+![image](https://user-images.githubusercontent.com/95668215/165870807-e770e150-6aa1-403b-be66-3f9e459f629f.png)
 
 ```{r}
 #shapiro test for normality
