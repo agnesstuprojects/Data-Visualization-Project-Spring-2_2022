@@ -28,6 +28,7 @@ p+theme()
 ```{r}
 apartments %>% summarise(average_living_area = mean(sqft_living))
 ```
+![image](https://user-images.githubusercontent.com/95668215/165870653-274c4b80-26f8-4ace-bcc2-726bf07b0fa5.png)
 
 # Distribution of Bedrooms
 ```{r}
