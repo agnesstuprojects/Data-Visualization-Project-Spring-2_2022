@@ -244,24 +244,35 @@ write.csv(Results, file = "modelResults.csv")
 ```
 
 # Present Output in Shiny
-#Shiny Output Link:
-# https://wolned-agnes-sithole.shinyapps.io/FinalProjectResults
+
+# Shiny Output Link:
+  https://wolned-agnes-sithole.shinyapps.io/FinalProjectResults
 
 
 library(shiny)
+
 library(shinyWidgets)
+
 library(tidyverse)
+
 library(ggthemes)
+
 library(ggplot2)
+
 library(plotly)
+
 library(DT)
 
+# Read Data
 apartments <- read.csv("apartment_price_2021.csv")
+
 bedroomspred <- read.csv("BedroomsPredvsActual.csv")
+
 bedroomspred1 <- bedroomspred[c(2,3,4,5,6)]
+
 results <- read.csv("modelResults.csv")
 
-#Define User Interface
+# Define User Interface
 ui <- fluidPage(
   titlePanel("Bedroom Prediction Results"),
   sliderInput(inputId = "ActualBedrooms",
@@ -303,5 +314,7 @@ mainPanel(
 
 # Run the application 
 shinyApp(ui = ui, server = server)
+
+# Result
 ![image](https://user-images.githubusercontent.com/95668215/165867639-6276c877-dd1a-4640-b69d-949ac7121a27.png)
 
