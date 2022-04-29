@@ -248,7 +248,8 @@ Mean Squared Error: 0.5765217
 
 Root mean square error: 0.7592903 
 
-# Which model is the best and Why?
+Which model is the best and Why?
+
 RMSE is the best model. It has the least error without being overfitted and uses the least amount of variables for prediction which means less computing power is needed to process the model prediction.
 
 # Create a Results table for all models used
