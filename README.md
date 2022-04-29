@@ -7,6 +7,7 @@ Considering the data provided, we are wrangling a large set of property sales re
 
 # Libraries are in a seperate file
 
+# Read the data file
 ```{r}
 apartments <- read_csv("apartment_price_2021.csv")
 head(apartments)
