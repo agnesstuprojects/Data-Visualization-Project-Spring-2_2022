@@ -9,8 +9,8 @@ Prediction of property prices is becoming increasingly important and beneficial.
 Property prices are a good indicator of both the overall market condition and the economic health of a country. 
 Considering the data provided, we are wrangling a large set of property sales records stored in an unknown format and with unknown data quality issues
 
-# Libraries are in a seperate file
 # Code in R Programming
+*** Libraries are in a seperate file
 # Read the data file
 ```{r}
 apartments <- read_csv("apartment_price_2021.csv")
