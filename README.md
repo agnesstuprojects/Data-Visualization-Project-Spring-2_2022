@@ -308,7 +308,7 @@ mainPanel(
 ))
 
 
-# Define server logic required to draw PLOT
+# Define server logic required to draw the plot
   server <- function(input, output){
     output$table <- renderTable(results)
     output$plot1 <- renderPlotly({
