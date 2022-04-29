@@ -125,7 +125,7 @@ ann_result <- cor(predicted_bedrooms,test$bedrooms)
 ann_result
 ```
 
-#5 Neurons for the hidden layer
+# 5 Neurons for the hidden layer
 ```{r}
 set.seed(12345)
 model2 <- neuralnet(formula = bedrooms ~ price + bathrooms + sqft_living + sqft_lot + waterfront + view + condition + sqft_above + sqft_basement, data = train,hidden = 5)
@@ -221,7 +221,6 @@ RMSE is the best model. It has the least error without being overfitted and uses
 
 # Create a Results table for all models used
 ```{r}
-# Create a data frame predicted Gold Medals and the Actual Gold
 Results <- data.frame(ann_single_neuron = ann_result, 
                       ann_5_hidden_neurons = ann_result2,
                       naivebayes_accuracy = naivebayesaccuracy,
