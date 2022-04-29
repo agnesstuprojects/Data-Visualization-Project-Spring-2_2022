@@ -340,5 +340,5 @@ mainPanel(
 shinyApp(ui = ui, server = server)
 
 # Result
-![image](https://user-images.githubusercontent.com/95668215/165867639-6276c877-dd1a-4640-b69d-949ac7121a27.png)
+![image](https://user-images.githubusercontent.com/95668215/165878225-f7468bc2-5d03-4865-912a-423f37bbb5b0.png)
 
