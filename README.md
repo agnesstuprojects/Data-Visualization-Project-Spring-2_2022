@@ -71,6 +71,7 @@ ggplot() +
 shapiro.test(apartments$bedrooms)
 ```
 ![image](https://user-images.githubusercontent.com/95668215/165870940-a56bec96-8f18-4989-9438-adfb1c6aa17f.png)
+
 pvalue is low, we reject the null hypothesis : it is not normal
 
 # Top 10 Cities in USA with Rental Apartments and the number of Apartments in those cities.
