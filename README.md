@@ -130,6 +130,8 @@ predicted_bedrooms <- model_results$net.result
 ann_result <- cor(predicted_bedrooms,test$bedrooms)
 ann_result
 ```
+         [,1]
+[1,] 0.03346162
 
 # 5 Neurons for the hidden layer
 ```{r}
