@@ -245,9 +245,9 @@ write.csv(Results, file = "modelResults.csv")
 
 # Present Output in Shiny
 
-# Shiny Output Link:
-  https://wolned-agnes-sithole.shinyapps.io/FinalProjectResults
+# Shiny Output Link:    https://wolned-agnes-sithole.shinyapps.io/FinalProjectResults
 
+# Libraries
 
 library(shiny)
 
