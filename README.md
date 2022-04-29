@@ -113,7 +113,7 @@ apartments %>%
 ![image](https://user-images.githubusercontent.com/95668215/165870034-5c0d27b8-cbab-49e2-a046-0f0ec9fc9423.png)
 
 
-# Simple ANN with only one single hidden neuron
+# Simple ANN with a single hidden neuron
 ```{r}
 ## Prepare Training and Testing Sets
 set.seed(12345)
