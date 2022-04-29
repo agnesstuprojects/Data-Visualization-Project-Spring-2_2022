@@ -243,7 +243,6 @@ RMSE is the best model. It has the least error without being overfitted and uses
 
 #Create a Results table for all models used
 ```{r}
-# Create a data frame predicted Gold Medals and the Actual Gold
 Results <- data.frame(ann_single_neuron = ann_result, 
                       ann_5_hidden_neurons = ann_result2,
                       naivebayes_accuracy = naivebayesaccuracy,
