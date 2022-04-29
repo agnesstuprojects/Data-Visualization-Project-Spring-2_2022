@@ -12,6 +12,7 @@ Considering the data provided, we are wrangling a large set of property sales re
 apartments <- read_csv("apartment_price_2021.csv")
 head(apartments)
 ```
+![image](https://user-images.githubusercontent.com/95668215/165870549-6ee23fc7-c8ee-4d0a-b883-c01f89fb27cb.png)
 
 # Apartment bedrooms vs bathrooms by City
 ```{r}
