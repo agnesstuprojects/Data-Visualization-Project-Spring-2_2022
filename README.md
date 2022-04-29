@@ -66,12 +66,12 @@ ggplot() +
 ```
 ![image](https://user-images.githubusercontent.com/95668215/165870807-e770e150-6aa1-403b-be66-3f9e459f629f.png)
 
+# shapiro test for normality
 ```{r}
-#shapiro test for normality
 shapiro.test(apartments$bedrooms)
-##pvalue is low, we reject the null hypothesis : it is not normal
 ```
 ![image](https://user-images.githubusercontent.com/95668215/165870940-a56bec96-8f18-4989-9438-adfb1c6aa17f.png)
+pvalue is low, we reject the null hypothesis : it is not normal
 
 # Top 10 Cities in USA with Rental Apartments and the number of Apartments in those cities.
 ```{r}
