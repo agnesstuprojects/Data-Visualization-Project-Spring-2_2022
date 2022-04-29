@@ -13,7 +13,7 @@ apartments <- read_csv("apartment_price_2021.csv")
 head(apartments)
 ```
 
-# Apartments bedrooms vs bathrooms by City
+# Apartment bedrooms vs bathrooms by City
 ```{r}
 p <- ggplot(data = apartments, aes(x=bedrooms,y=bathrooms,fill=city))+
   geom_bar(stat = "identity")+ guides(fill = FALSE)
