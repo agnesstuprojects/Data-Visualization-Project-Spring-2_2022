@@ -129,7 +129,7 @@ plot(model)
 
 # Compute values
 ```{r}
-#Predict strength (index 9) when given [1:8]
+#Predict strength (index 9) when given [1:9]
 model_results <- neuralnet::compute(model, test[1:9])
 #Obtain predicted strength values
 predicted_bedrooms <- model_results$net.result
