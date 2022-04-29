@@ -2,7 +2,7 @@
 
 Shiny Output Link: https://wolned-agnes-sithole.shinyapps.io/FinalProjectResults
 
-Tableau Output Link: 
+Tableau Output Link: https://public.tableau.com/app/profile/agnes2253/viz/Heatmap_16503282119200/bedroomsbycity?publish=yes
 
 The real estate markets, present an interesting opportunity for data analysts to analyze and predict where property prices are moving towards. 
 Prediction of property prices is becoming increasingly important and beneficial. 
