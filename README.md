@@ -1,5 +1,4 @@
 # Apartment Prices in USA 2021 
-# Code in R Programming
 
 The real estate markets, present an interesting opportunity for data analysts to analyze and predict where property prices are moving towards. 
 Prediction of property prices is becoming increasingly important and beneficial. 
@@ -7,7 +6,7 @@ Property prices are a good indicator of both the overall market condition and th
 Considering the data provided, we are wrangling a large set of property sales records stored in an unknown format and with unknown data quality issues
 
 # Libraries are in a seperate file
-
+# Code in R Programming
 # Read the data file
 ```{r}
 apartments <- read_csv("apartment_price_2021.csv")
