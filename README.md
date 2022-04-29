@@ -22,7 +22,7 @@ p <- ggplot(data = apartments, aes(x=bedrooms,y=bathrooms,fill=city))+
         axis.text.y = element_text(colour = "black", size = 10))
 p+theme()
 ```
-
+![image](https://user-images.githubusercontent.com/95668215/165869694-9e288ebe-2f40-4bfd-84b2-1bea29028614.png)
 
 # Average living area in Sqft is 2139 sqft
 ```{r}
@@ -43,6 +43,7 @@ ggplot(apartments)+
   ) +
   ggthemes::theme_few()
 ```
+![image](https://user-images.githubusercontent.com/95668215/165869751-6e6bd2ef-7c1f-4a92-83b0-b32d6a344b05.png)
 
 # Comparitive distribution of apartments in Seattle and Bellevue on the basis of number of Bedrooms in each Apartment
 
@@ -52,12 +53,13 @@ apartments %>%
 ggplot() +
   geom_density(aes(x = bedrooms, fill = city)) +
   labs(
-    title = "Comparitive distribution of Apartments in Seattle and Redmond",
+    title = "Comparitive distribution of Apartments in Seattle and Bellevue",
     x = "No. of Bedrooms",
     y = "Distribution"
   ) +
   ggthemes::theme_few()
 ```
+![image](https://user-images.githubusercontent.com/95668215/165869935-1d5d8105-695b-4d0b-9ee3-18520785e4db.png)
 
 ```{r}
 #shapiro test for normality
@@ -81,6 +83,7 @@ apartments %>%
   ) +
   ggthemes::theme_few() -> top10cities
 ```
+![image](https://user-images.githubusercontent.com/95668215/165869989-f6b0639a-6da2-4efd-a9c9-12a8e612934b.png)
 
 # Relationship between Price of Apartment and Living area
 ```{r}
@@ -100,6 +103,7 @@ apartments %>%
   labs(title = "Is area of living and price correlated?  YES") +
   ggthemes::theme_calc()
 ```
+![image](https://user-images.githubusercontent.com/95668215/165870034-5c0d27b8-cbab-49e2-a046-0f0ec9fc9423.png)
 
 
 # Simple ANN with only a sigle hidden neuron
@@ -114,6 +118,7 @@ model <- neuralnet(formula = bedrooms ~ price + bathrooms + sqft_living + sqft_l
 #Visualize the network topology
 plot(model)
 ```
+![image](https://user-images.githubusercontent.com/95668215/165870079-f354620c-9d77-460c-bdd8-844598a113f4.png)
 
 # Compute values
 ```{r}
@@ -133,6 +138,7 @@ model2 <- neuralnet(formula = bedrooms ~ price + bathrooms + sqft_living + sqft_
 #Visualize the network topology
 plot(model2)
 ```
+![image](https://user-images.githubusercontent.com/95668215/165870115-31d1b2ff-6050-4559-b7cf-95e85f214db2.png)
 
 ```{r}
 #Compute values and test correlation
@@ -144,6 +150,8 @@ predicted_bedrooms2 <- model_results2$net.result
 ann_result2 <- cor(predicted_bedrooms2,test$bedrooms) 
 ann_result2
 ```
+           [,1]
+[1,] 0.01939913
 
 # Examine normalized data to unnormalized values(actual)
 ```{r}
@@ -153,6 +161,7 @@ bedrooms <- data.frame (
   pred = round(predicted_bedrooms2))
 head(bedrooms, n = 3)
 ```
+![image](https://user-images.githubusercontent.com/95668215/165870204-30c8423f-6bf9-4c98-9e60-7b15e55989d4.png)
 
 # Naive Bayes Analysis
 ```{r}
@@ -211,6 +220,8 @@ bedroomsPrediction <- data.frame(Price = test$price,
 head(bedroomsPrediction, n = 3)
 write.csv(bedroomsPrediction, file = "BedroomsPredvsActual.csv")
 ```
+![image](https://user-images.githubusercontent.com/95668215/165870271-b3703219-1f2b-4bab-bd24-5a8dba907aa4.png)
+
 
 # Linear Model Error Metrices
 ```{r}
@@ -243,6 +254,8 @@ Results <- data.frame(ann_single_neuron = ann_result,
 Results
 write.csv(Results, file = "modelResults.csv")
 ```
+![image](https://user-images.githubusercontent.com/95668215/165870339-9344bfc3-fbee-4a60-aa0f-ef9e61c42428.png)
+
 
 # Present Output in Shiny
 
