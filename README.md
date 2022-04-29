@@ -197,7 +197,8 @@ accurateRows <- nrow(subset(laplace_results, Actual == Prediction))
 laplaceaccuracy <- accurateRows/nrow(test)
 cat("Laplace Accuracy:", laplaceaccuracy)
 ```
-# Result
+Result
+
 Naive Bayes Accuracy: 0.2121739
 
 Laplace Accuracy: 0.2182609
@@ -239,7 +240,8 @@ cat("Mean Squared Error:",mse,"\n")
 rmse <- rmse(bedroomsPrediction$ActualBedrooms,bedroomsPrediction$PredictedBedrooms4)
 cat("Root mean square error:",rmse,"\n")
 ```
-# Result
+Result
+
 Mean Absolute Error: 0.486087 
 
 Mean Squared Error: 0.5765217 
