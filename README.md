@@ -136,7 +136,6 @@ predicted_bedrooms <- model_results$net.result
 ann_result <- cor(predicted_bedrooms,test$bedrooms)
 ann_result
 ```
-         [,1]
 [1,] 0.03346162
 
 # 5 Neurons for the hidden layer
@@ -158,7 +157,6 @@ predicted_bedrooms2 <- model_results2$net.result
 ann_result2 <- cor(predicted_bedrooms2,test$bedrooms) 
 ann_result2
 ```
-           [,1]
 [1,] 0.01939913
 
 # Examine normalized data to unnormalized values(actual)
