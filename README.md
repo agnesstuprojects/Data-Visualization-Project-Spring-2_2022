@@ -43,7 +43,7 @@ ggplot(apartments)+
   ggthemes::theme_few()
 ```
 
-# Comparitive distribution of apartments in Seattle and Bellevue on the basis of number of Bedrooms in each Appartment
+# Comparitive distribution of apartments in Seattle and Bellevue on the basis of number of Bedrooms in each Apartment
 
 ```{r}
 apartments %>%
@@ -81,7 +81,7 @@ apartments %>%
   ggthemes::theme_few() -> top10cities
 ```
 
-# Relationship between Price of Appartment and Living area
+# Relationship between Price of Apartment and Living area
 ```{r}
 apartments %>%
   select(c("sqft_living", "price")) %>%
@@ -181,7 +181,8 @@ laplaceaccuracy <- accurateRows/nrow(test)
 cat("Laplace Accuracy:", laplaceaccuracy)
 ```
 # Result
-Naive Bayes Accuracy: 0.2121739 
+Naive Bayes Accuracy: 0.2121739
+
 Laplace Accuracy: 0.2182609
 
 Naive Bayes and Laplace may not be the best method to classify this data, because 0.21 accuracy, might be too low.I would recommend to further analyze using other models then choose the best method of study.
@@ -221,10 +222,12 @@ cat("Root mean square error:",rmse,"\n")
 ```
 # Result
 Mean Absolute Error: 0.486087 
+
 Mean Squared Error: 0.5765217 
+
 Root mean square error: 0.7592903 
 
-### Which model is the best and Why?
+# Which model is the best and Why?
 RMSE is the best model. It has the least error without being overfitted and uses the least amount of variables for prediction which means less computing power is needed to process the model prediction.
 
 # Create a Results table for all models used
