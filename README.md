@@ -46,7 +46,7 @@ ggplot(apartments)+
 ```
 ![image](https://user-images.githubusercontent.com/95668215/165869751-6e6bd2ef-7c1f-4a92-83b0-b32d6a344b05.png)
 
-# Comparitive distribution of apartments in Seattle and Bellevue on the basis of number of Bedrooms in each Apartment
+# Comparative distribution of apartments in Seattle and Bellevue on the basis of number of Bedrooms in each Apartment
 
 ```{r}
 apartments %>%
